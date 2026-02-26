@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessories Hub | Premium Phone Accessories</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0a0a;
+    color:#fff;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    background:#000;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #222;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:bold;
+}
+
+.logo span{
+    background:#f47321;
+    color:#000;
+    padding:4px 10px;
+    border-radius:4px;
+}
+
+nav a{
+    color:#fff;
+    margin-left:25px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#f47321;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:linear-gradient(to right,#000,#111);
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#bbb;
+    margin-bottom:30px;
+}
+
+.hero button{
+    padding:12px 25px;
+    background:#f47321;
+    border:none;
+    font-weight:bold;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.hero button:hover{
+    background:#fff;
+}
+
+/* PRODUCTS */
+.products{
+    max-width:1200px;
+    margin:80px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:0 20px;
+}
+
+.product-card{
+    background:#111;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s ease;
+    box-shadow:0 0 20px rgba(244,115,33,0.15);
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.product-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#f47321;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.product-info button{
+    width:100%;
+    padding:10px;
+    background:#25D366;
+    border:none;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+    color:#fff;
+}
+
+.product-info button:hover{
+    opacity:0.9;
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #222;
+    margin-top:80px;
+    color:#777;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Accessories <span>Hub</span></div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Premium Phone Accessories</h1>
+    <p>High-quality cases, chargers, earbuds & power banks for your smartphone.</p>
+    <button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
+</section>
+
+<section class="products" id="products">
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=600&q=80">
+<div class="product-info">
+<h3>Shockproof Case</h3>
+<div class="price">$19.99</div>
+<button onclick="orderWhatsApp('Shockproof Case', 19.99)">Buy via WhatsApp</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1585386959984-a41552231658?auto=format&fit=crop&w=600&q=80">
+<div class="product-info">
+<h3>Wireless Earbuds</h3>
+<div class="price">$59.99</div>
+<button onclick="orderWhatsApp('Wireless Earbuds', 59.99)">Buy via WhatsApp</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1615526675159-e248c3021d3f?auto=format&fit=crop&w=600&q=80">
+<div class="product-info">
+<h3>Fast Charger 25W</h3>
+<div class="price">$29.99</div>
+<button onclick="orderWhatsApp('Fast Charger 25W', 29.99)">Buy via WhatsApp</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=600&q=80">
+<div class="product-info">
+<h3>Power Bank 20000mAh</h3>
+<div class="price">$39.99</div>
+<button onclick="orderWhatsApp('Power Bank 20000mAh', 39.99)">Buy via WhatsApp</button>
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 Accessories Hub. All Rights Reserved.
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a class="whatsapp-float" 
+href="https://wa.me/201063345269" 
+target="_blank">💬</a>
+
+<script>
+function orderWhatsApp(productName, price){
+    const phoneNumber = "201063345269";
+
+    const message = `Hello Accessories Hub,
+I would like to order:
+
+Product: ${productName}
+Price: $${price}
+
+Please provide payment and delivery details.`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
